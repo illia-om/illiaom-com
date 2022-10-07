@@ -7,7 +7,7 @@ import utilStyles from '../styles/utils.module.css';
 
 type LayoutProps = {
     children: React.ReactNode;
-    home?: React.ReactNode;
+    home?: boolean;
 };
 
 const name = 'illia omelchenko';

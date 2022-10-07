@@ -22,9 +22,8 @@ export function getSortedPostsData() {
 
         // Combine the data with the id
         return {
-            id: id as string,
-            date: matterResult.data.date as string,
-            title: matterResult.data.title as string,
+            id,
+            ...(matterResult.data as { date: string; title: string })
         };
     });
     // Sort posts by date
@@ -68,6 +67,6 @@ export async function getPostData(id: string) {
     return {
         id,
         contentHtml,
-        ...matterResult.data,
+        ...(matterResult.data as { date: string; title: string })
     };
 }

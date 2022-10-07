@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 import Date from '../components/date';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
@@ -11,7 +12,15 @@ import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css';
 
 
-const Home: NextPage = ({ allPostsData }) => {
+const Home = ({
+  allPostsData
+}: {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) => {
   return (
     <Layout home>
       <Head>
@@ -44,7 +53,7 @@ const Home: NextPage = ({ allPostsData }) => {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
