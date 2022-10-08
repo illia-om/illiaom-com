@@ -15,7 +15,7 @@ const Layout = ({ children, home }: LayoutProps) => {
     return (
         <div>
             <Head>
-                <link rel="icon" href="/favicon2.ico" />
+                <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
                     content="illia_om site"
