@@ -8,6 +8,9 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 
+import styles from '../styles/Home.module.css'
+import utilStyles from '../styles/utils.module.css';
+
 
 const Home = ({
   allPostsData
@@ -23,22 +26,23 @@ const Home = ({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
+      <section className={utilStyles.headingMd}>
+        <p>Web Dev. DM for help with Notion API. Check my Planner template <a>http://shorturl.at/fgotz</a></p>
         <p>
-          Web Dev. DM for help with Notion API. Check my{' '}
-          <a href="https://templates-by-illia.notion.site/Planner-template-d3a49f51c0c64e65a1cc498b8526a154">Planner template</a>
+          (This is a sample website - you’ll be building a site like this on{' '}
+          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-      <section>
-        <h2>Blog</h2>
-        <ul>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
+            <li className={utilStyles.listItem} key={id}>
               <Link href={`/blog/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small>
+              <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
             </li>
