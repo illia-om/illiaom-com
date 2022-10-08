@@ -33,7 +33,7 @@ const Home = ({
         <h2>Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li>
+            <li key={id}>
               <Link href={`/blog/${id}`}>
                 <a>{title}</a>
               </Link>
