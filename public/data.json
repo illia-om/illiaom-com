@@ -1,0 +1,14 @@
+[
+    {
+        "id": "bio",
+        "title": "about me",
+        "description": "Web Dev. DM for help with Notion API.",
+        "link": "/about"
+    },
+    {
+        "id": "blog",
+        "title": "blog",
+        "description": "My blog post about everything that I'm interesting in",
+        "link": "/blog"
+    }
+]

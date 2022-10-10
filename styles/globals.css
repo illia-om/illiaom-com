@@ -25,3 +25,11 @@ img {
   max-width: 100%;
   display: block;
 }
+
+:root {
+  --main-bg-color: rgb(217, 217, 217);
+  --secondary-bg-color: rgb(148, 148, 148);
+  --main-accent-color: rgb(0, 147, 69);
+  --main-text-color: black;
+  --select-text-color: #0070f3;
+}
