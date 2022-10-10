@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './layout.module.css';
@@ -11,7 +10,8 @@ type LayoutProps = {
 };
 
 const name = 'illia omelchenko';
-export const siteTitle = '@illia_om personal site-hub';
+const logoName = '@illia';
+export const siteTitle = '@illia_om site';
 
 const Layout = ({ children, home }: LayoutProps) => {
     return (
@@ -20,54 +20,32 @@ const Layout = ({ children, home }: LayoutProps) => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="@illia_om personal site"
                 />
-                <meta
-                    property="og:image"
-                    content={`https://og-image.vercel.app/${encodeURI(
-                        siteTitle,
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                />
-                <meta name="og:title" content={siteTitle} />
-                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className={styles.header}>
-                {home ? (
-                    <>
-                        <Image
-                            priority
-                            src="/images/profile.jpg"
-                            className={utilStyles.borderCircle}
-                            height={144}
-                            width={144}
-                            alt=""
-                        />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <a>
-                                <Image
-                                    priority
-                                    src="/images/profile.jpg"
-                                    className={utilStyles.borderCircle}
-                                    height={108}
-                                    width={108}
-                                    alt=""
-                                />
-                            </a>
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
-                                <a className={utilStyles.colorInherit}>{name}</a>
-                            </Link>
-                        </h2>
-                    </>
-                )}
+                <div className={styles.contentContainer}>
+                    {home ? (
+                        <>
+                            <h1 className={utilStyles.heading2Xl}>{logoName}</h1>
+                        </>
+                    ) : (
+                        <>
+                            <h1 className={utilStyles.heading2Xl}>
+                                <Link href="/">
+                                    <a className={utilStyles.colorInherit}>{logoName}</a>
+                                </Link>
+                            </h1>
+                        </>
+                    )}
+                    <div className={styles.underline} />
+                    <h1 className={utilStyles.heading2Xl}>om</h1>
+                </div>
             </header>
             <main>
-                {children}
+                <div className={styles.contentContainer}>
+                    {children}
+                </div>
             </main>
         </div>
 
