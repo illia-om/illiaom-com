@@ -8,6 +8,5 @@ export type GridItem = {
 }
 
 export function getHomeGridItems() {
-    console.log(itemsArray);
     return itemsArray;
 }
