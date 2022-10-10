@@ -8,7 +8,6 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 
-import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css';
 
 

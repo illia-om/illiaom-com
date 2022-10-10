@@ -1,0 +1,23 @@
+.item {
+  /* flex-basis: 300px; */
+  flex: 1 0 0;
+  height: 100px;
+  background: #536ed1;
+  margin: 10px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:nth-of-type(1) {
+}
+
+.flex-container {
+  display: flex;
+  background-color: #f4f4f4;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+}
