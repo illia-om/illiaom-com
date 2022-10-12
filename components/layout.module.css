@@ -16,9 +16,9 @@ header .contentContainer {
 
 .header .underline {
   width: 100%;
-  height: 4px;
+  height: 3px;
   background: var(--main-text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 13px;
 }
 
 .header {
