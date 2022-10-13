@@ -25,7 +25,7 @@ const Header = ({ path }: HeaderProps) => {
                         <h1 className={utilStyles.headingXl}>{illia}</h1>
                     </>
                 )}
-                <h1 className={utilStyles.headingXlNoSpace + ' ' + styles.underline}>___________________________________________________________________________________</h1>
+                <h1 className={utilStyles.headingXl + ' ' + styles.underline + ' ' + utilStyles.deleteCharSpacing}>{Array(1000).fill('_')}</h1>
                 <h1 className={utilStyles.headingXl}>om</h1>
         </header>
     );
