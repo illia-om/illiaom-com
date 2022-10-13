@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: flex-end;
+    line-height: 3;
+}
+
+.header .underline {
+    min-width: 0;
+    overflow: hidden
+}
+
+.header {
+    background: var(--main-bg-color);
+}

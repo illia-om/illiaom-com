@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Header from './header';
 
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-
 type LayoutProps = {
     children: React.ReactNode;
     home?: boolean;
@@ -23,25 +23,7 @@ const Layout = ({ children, home }: LayoutProps) => {
                     content="@illia_om personal site"
                 />
             </Head>
-            <header className={styles.header}>
-                <div className={styles.contentContainer}>
-                    {home ? (
-                        <>
-                            <h1 className={utilStyles.heading2Xl}>{logoName}</h1>
-                        </>
-                    ) : (
-                        <>
-                            <h1 className={utilStyles.heading2Xl}>
-                                <Link href="/">
-                                    <a className={utilStyles.colorInherit}>{logoName}</a>
-                                </Link>
-                            </h1>
-                        </>
-                    )}
-                    <div className={styles.underline} />
-                    <h1 className={utilStyles.heading2Xl}>om</h1>
-                </div>
-            </header>
+            <Header/>
             <main>
                 <div className={styles.contentContainer}>
                     {children}
