@@ -5,10 +5,10 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inconsolata"
+          href="https://fonts.googleapis.com/css2?family=Inconsolata&display=optional"
         />
         <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=optional"
         />
       </Head>
       <body>
