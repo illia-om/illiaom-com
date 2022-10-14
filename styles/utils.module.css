@@ -14,6 +14,10 @@
     margin: 1rem 0;
 }
 
+.deleteCharSpacing {
+    letter-spacing: -0.3rem;
+}
+
 .headingXlNoSpace {
     font-size: 2rem;
     letter-spacing: -0.2rem;
@@ -37,6 +41,10 @@
 .bodyText {
     font-size: 1rem;
     margin: 0;
+}
+
+.bold {
+    font-weight: bold;  
 }
 
 .borderCircle {
@@ -63,4 +71,8 @@
 
 .lightText {
     color: #666;
+}
+
+.container {
+    padding: 0 20px;
 }
