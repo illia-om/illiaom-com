@@ -1,19 +1,20 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from './header';
+import Footer from './footer';
 
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 type LayoutProps = {
     children: React.ReactNode;
-    home?: boolean;
+    path?: string[];
 };
 
 const name = 'illia omelchenko';
 const logoName = '@illia';
 export const siteTitle = '@illia_om site';
 
-const Layout = ({ children, home }: LayoutProps) => {
+const Layout = ({ children, path }: LayoutProps) => {
     return (
         <div className={styles.container}>
             <Head>
@@ -23,12 +24,11 @@ const Layout = ({ children, home }: LayoutProps) => {
                     content="@illia_om personal site"
                 />
             </Head>
-            <Header/>
+            <Header path={path}/>
             <main>
-                <div className={styles.contentContainer}>
-                    {children}
-                </div>
+                {children}
             </main>
+            <Footer />
         </div>
 
     )
