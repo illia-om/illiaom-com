@@ -14,8 +14,8 @@ const Footer = () => {
             <div className={utilStyles.container}>
                 <p>find me here:</p>
                 <ul>
-                    {links.map(link => (
-                        <li><Link href={link.url}>{link.text}</Link></li>
+                    {links.map((link, i) => (
+                        <li key={i}><Link href={link.url}>{link.text}</Link></li>
                     ))}
                 </ul>
             </div>

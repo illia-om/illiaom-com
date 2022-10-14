@@ -17,7 +17,7 @@ const Card = ({ itemData }: GridContentItemProps) => {
         <div className={styles.item + (itemData.backgroundImage ? (' ' + styles.heightForImage) : (''))}>
             {itemData.backgroundImage ? (
                 <div className={styles.imgContainer}>
-                    <Image className={styles.img} width={3} height={5} layout='responsive' src='/images/illia-portret-half.png'></Image>
+                    <Image alt='' className={styles.img} width={3} height={5} layout='responsive' src='/images/illia-portret-half.png'></Image>
                 </div>
             ): <></>}
             <div className={styles.cardContentContainer + (itemData.backgroundImage ? (' ' + styles.marginForImage) : (''))}>
