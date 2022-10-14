@@ -24,7 +24,7 @@ const Home = ({
   }[]
 }) => {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
