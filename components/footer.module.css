@@ -1,0 +1,8 @@
+.footer {
+    background: var(--secondary-bg-color);
+    margin-top: auto;
+}
+
+.footer ul {
+    list-style: decimal-leading-zero;
+}

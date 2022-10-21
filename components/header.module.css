@@ -1,0 +1,17 @@
+.header .underline {
+    min-width: 1rem;
+    overflow: hidden
+}
+
+.header {
+    background: var(--main-bg-color);
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.minWidth{
+    width: 1.3rem;
+}

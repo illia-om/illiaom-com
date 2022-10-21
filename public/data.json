@@ -1,0 +1,21 @@
+[
+    {
+        "id": "bio",
+        "title": "/about",
+        "description": "hi, my name is illia. i’m web developer. notion intuthiast.film photographer.now based in london.",
+        "link": "/about",
+        "backgroundImage": "/images/illia-portret-half.png"
+    },
+    {
+        "id": "notion",
+        "title": "/notion",
+        "description": "I use notion everyday for a bunch of staff. And i’m happy to share some of templates that I taylor along my joerney.",
+        "link": "/notion"
+    },
+    {
+        "id": "blog",
+        "title": "/blog",
+        "description": "My blog post about everything that I'm interesting in",
+        "link": "/blog"
+    }
+]
